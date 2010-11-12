@@ -3,4 +3,9 @@ html(lang="en")
   head
     title test
   body
-    hello world
+    - for (var key in data)
+      div= key
+        - for (var key2 in data[key])
+          div= key2
+          div= data[key][key2]
+
