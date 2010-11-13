@@ -1,12 +1,19 @@
 !!! 5
 html(lang="en")
   head
+    link(href: "/style.css", media: "screen", rel: "stylesheet", type: "text/css")
     title test
   body
     - for (var tweetIndex in data["results"])
       - tweet = data["results"][tweetIndex]
       - if ("en" == tweet.iso_language_code)
-        div.profile_image_url= tweet.profile_image_url
-        div.from_user= tweet.from_user
-        div.text= tweet.text
+        .wrapper
+          .tweet
+            .avatar
+              .profile_image_url
+                img(src: tweet.profile_image_url, width: 48, height: 48)
+            .text
+              span.from_user= tweet.from_user
+              span.tweet-text= tweet.text
+            .footer
 

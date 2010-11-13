@@ -1,0 +1,47 @@
+body {
+  background-color: #fff;
+  font-family: "Gill Sans";
+  margin: 0;
+  padding: 0;
+}
+
+.tweet {
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+span.from_user {
+}
+
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.avatar {
+  float: left;
+  width: 80px;
+}
+
+.profile_image_url {
+  margin-left: 16px;
+}
+
+.text {
+  float: right;
+  width: 405px;
+  margin-right: 15px;
+}
+
+.footer {
+  clear: both;
+}
+
+span.tweet-text {
+  margin: 10px;
+}
+
