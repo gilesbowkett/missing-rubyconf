@@ -7,9 +7,9 @@
 (chain (http.create-server (lambda (request response)
                              (response.write-head 200 (hash "Content-type" "text/html"))
                              (defun simple-output (error html)
-                               (sys.puts error)
+                               ; (sys.puts error)
                                (response.end html))
-                             (defvar api-url "http://search.twitter.com/search.json?q=rubyconf")
+                             (defvar api-url "http://search.twitter.com/search.json?q=rubyconf&rpp=100")
                              (chain (restler.get api-url (hash data (hash)))
                                     (add-listener "complete" (lambda (data twitter-response)
                                                                (jade.render-file "index.jade"

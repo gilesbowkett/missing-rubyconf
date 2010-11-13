@@ -3,9 +3,10 @@ html(lang="en")
   head
     title test
   body
-    - for (var key in data)
-      div= key
-        - for (var key2 in data[key])
-          div= key2
-          div= data[key][key2]
+    - for (var tweetIndex in data["results"])
+      - tweet = data["results"][tweetIndex]
+      - if ("en" == tweet.iso_language_code)
+        div.profile_image_url= tweet.profile_image_url
+        div.from_user= tweet.from_user
+        div.text= tweet.text
 
